@@ -607,6 +607,204 @@ public class ShipmentTest {
 		
 	}
 
+	@Test
+	public void testHundredDollarsPurchaseAmountNegativeNumItemsNextDay() {
+		
+		Shipment shipment = new Shipment(100,-1,DeliveryDay.NEXT_DAY);
+		assertEquals(100,shipment.getPurchaseAmount());
+		assertEquals(3,shipment.getNumberOfItems());
+		assertEquals(DeliveryDay.NEXT_DAY,shipment.getDeliveryDay());
+		
+	}
 	
+	@Test
+	public void testHundredDollarsPurchaseAmountNegativeNumItemsTwoDays() {
+		
+		Shipment shipment = new Shipment(100,-1,DeliveryDay.IN_TWO_DAYS);
+		assertEquals(100,shipment.getPurchaseAmount());
+		assertEquals(3,shipment.getNumberOfItems());
+		assertEquals(DeliveryDay.IN_TWO_DAYS,shipment.getDeliveryDay());
+		
+	}
+	
+	@Test
+	public void testHundredDollarsPurchaseAmountNegativeNumItemsAWeek() {
+		
+		Shipment shipment = new Shipment(100,-1,DeliveryDay.IN_A_WEEK);
+		assertEquals(100,shipment.getPurchaseAmount());
+		assertEquals(3,shipment.getNumberOfItems());
+		assertEquals(DeliveryDay.IN_A_WEEK,shipment.getDeliveryDay());
+		
+	}
+	
+	@Test
+	public void testHundredDollarsPurchaseAmountNegativeNumItemsInvalidInput() {
+		
+		Shipment shipment = new Shipment(100,-1,null);
+		assertEquals(100,shipment.getPurchaseAmount());
+		assertEquals(3,shipment.getNumberOfItems());
+		assertEquals(DeliveryDay.IN_A_WEEK,shipment.getDeliveryDay());
+		
+	}
+	
+	@Test
+	public void testHundredDollarsPurchaseAmountZeroItemNextDay() {
+		
+		Shipment shipment = new Shipment(100,0,DeliveryDay.NEXT_DAY);
+		assertEquals(100,shipment.getPurchaseAmount());
+		assertEquals(0,shipment.getNumberOfItems());
+		assertEquals(DeliveryDay.NEXT_DAY,shipment.getDeliveryDay());
+		
+	}
+	
+	@Test
+	public void testHundredDollarsPurchaseAmountZeroItemTwoDays() {
+		
+		Shipment shipment = new Shipment(100,0,DeliveryDay.IN_TWO_DAYS);
+		assertEquals(100,shipment.getPurchaseAmount());
+		assertEquals(0,shipment.getNumberOfItems());
+		assertEquals(DeliveryDay.IN_TWO_DAYS,shipment.getDeliveryDay());
+		
+	}
+	
+	@Test
+	public void testHundredDollarsPurchaseAmountZeroItemAWeek() {
+		
+		Shipment shipment = new Shipment(100,0,DeliveryDay.IN_A_WEEK);
+		assertEquals(100,shipment.getPurchaseAmount());
+		assertEquals(0,shipment.getNumberOfItems());
+		assertEquals(DeliveryDay.IN_A_WEEK,shipment.getDeliveryDay());
+		
+	}
+	
+	@Test
+	public void testHundredDollarsPurchaseAmountZeroItemInvalidInput() {
+		
+		Shipment shipment = new Shipment(100,0,null);
+		assertEquals(100,shipment.getPurchaseAmount());
+		assertEquals(0,shipment.getNumberOfItems());
+		assertEquals(DeliveryDay.IN_A_WEEK,shipment.getDeliveryDay());
+		
+	}
+	
+	@Test
+	public void testHundredDollarsPurchaseAmountFewItemsNextDay() {
+		
+		Shipment shipment = new Shipment(100,1,DeliveryDay.NEXT_DAY);
+		assertEquals(100,shipment.getPurchaseAmount());
+		assertEquals(1,shipment.getNumberOfItems());
+		assertEquals(DeliveryDay.NEXT_DAY,shipment.getDeliveryDay());
+		
+	}
+	
+	@Test
+	public void testHundredDollarsPurchaseAmountFewItemsTwoDays() {
+		
+		Shipment shipment = new Shipment(100,1,DeliveryDay.IN_TWO_DAYS);
+		assertEquals(100,shipment.getPurchaseAmount());
+		assertEquals(1,shipment.getNumberOfItems());
+		assertEquals(DeliveryDay.IN_TWO_DAYS,shipment.getDeliveryDay());
+		
+	}
+	
+	@Test
+	public void testHundredDollarsPurchaseAmountFewItemsAWeek() {
+		
+		Shipment shipment = new Shipment(100,1,DeliveryDay.IN_A_WEEK);
+		assertEquals(100,shipment.getPurchaseAmount());
+		assertEquals(1,shipment.getNumberOfItems());
+		assertEquals(DeliveryDay.IN_A_WEEK,shipment.getDeliveryDay());
+		
+	}
+	
+	@Test
+	public void testHundredDollarsPurchaseAmountFewItemsInvalidInput() {
+		
+		Shipment shipment = new Shipment(100,1,null);
+		assertEquals(100,shipment.getPurchaseAmount());
+		assertEquals(1,shipment.getNumberOfItems());
+		assertEquals(DeliveryDay.IN_A_WEEK,shipment.getDeliveryDay());
+		
+	}
+	
+	@Test
+	public void testHundredDollarsPurchaseAmountThreeItemsNextDay() {
+		
+		Shipment shipment = new Shipment(100,3,DeliveryDay.NEXT_DAY);
+		assertEquals(100,shipment.getPurchaseAmount());
+		assertEquals(3,shipment.getNumberOfItems());
+		assertEquals(DeliveryDay.NEXT_DAY,shipment.getDeliveryDay());
+		
+	}
+	
+	@Test
+	public void testHundredDollarsPurchaseAmountThreeItemsTwoDays() {
+		
+		Shipment shipment = new Shipment(100,3,DeliveryDay.IN_TWO_DAYS);
+		assertEquals(100,shipment.getPurchaseAmount());
+		assertEquals(3,shipment.getNumberOfItems());
+		assertEquals(DeliveryDay.IN_TWO_DAYS,shipment.getDeliveryDay());
+		
+	}
+	
+	@Test
+	public void testHundredDollarsPurchaseAmountThreeItemsAWeek() {
+		
+		Shipment shipment = new Shipment(100,3,DeliveryDay.IN_A_WEEK);
+		assertEquals(100,shipment.getPurchaseAmount());
+		assertEquals(3,shipment.getNumberOfItems());
+		assertEquals(DeliveryDay.IN_A_WEEK,shipment.getDeliveryDay());
+		
+	}
+	
+	@Test
+	public void testHundredDollarsPurchaseAmountThreeItemsInvalidDate() {
+		
+		Shipment shipment = new Shipment(100,3,null);
+		assertEquals(100,shipment.getPurchaseAmount());
+		assertEquals(3,shipment.getNumberOfItems());
+		assertEquals(DeliveryDay.IN_A_WEEK,shipment.getDeliveryDay());
+		
+	}
+	
+	@Test
+	public void testHundredDollarsPurchaseAmountManyItemsNextDay() {
+		
+		Shipment shipment = new Shipment(100,4,DeliveryDay.NEXT_DAY);
+		assertEquals(100,shipment.getPurchaseAmount());
+		assertEquals(4,shipment.getNumberOfItems());
+		assertEquals(DeliveryDay.NEXT_DAY,shipment.getDeliveryDay());
+		
+	}
+	
+	@Test
+	public void testHundredDollarsPurchaseAmountManyItemsTwoDays() {
+		
+		Shipment shipment = new Shipment(100,4,DeliveryDay.IN_TWO_DAYS);
+		assertEquals(100,shipment.getPurchaseAmount());
+		assertEquals(4,shipment.getNumberOfItems());
+		assertEquals(DeliveryDay.IN_TWO_DAYS,shipment.getDeliveryDay());
+		
+	}
+	
+	@Test
+	public void testHundredDollarsPurchaseAmountManyItemsAWeek() {
+		
+		Shipment shipment = new Shipment(100,4,DeliveryDay.IN_A_WEEK);
+		assertEquals(100,shipment.getPurchaseAmount());
+		assertEquals(4,shipment.getNumberOfItems());
+		assertEquals(DeliveryDay.IN_A_WEEK,shipment.getDeliveryDay());
+		
+	}
+	
+	@Test
+	public void testHundredDollarsPurchaseAmountManyItemsInvalidDate() {
+		
+		Shipment shipment = new Shipment(100,4,null);
+		assertEquals(100,shipment.getPurchaseAmount());
+		assertEquals(4,shipment.getNumberOfItems());
+		assertEquals(DeliveryDay.IN_A_WEEK,shipment.getDeliveryDay());
+		
+	}
 	
 }
