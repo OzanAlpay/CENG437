@@ -14,36 +14,167 @@ public class ShipmentTest {
 	 *         
 	 *         For Purchase Amount Input Set We Took 5 Different Samples
 	 *         
-	 *         From (-∞ to 0) --> our sample is = -1
-	 *         We also used 0 since it is a boundary value we need to use it
-	 *         From (0 to 100] --> our sample is = 1
-	 *         We also used 100 since it is a boundary value
-	 *         From (100 to ∞) --> we used 101 
+	 *         From (-∞ to 0) --> our sample is = -1 --> NegativePurchaseAmount
+	 *         We also used 0 since it is a boundary value we need to use it --> ZeroPurchaseAmount
+	 *         From (0 to 100] --> our sample is = 1 --> OneDollarPurchaseAmount
+	 *         We also used 100 since it is a boundary value --> HundredDollars
+	 *         From (100 to ∞) --> we used 101 --> MoreThanHundredDollars
 	 *         
 	 *         For Number of Items Input Set We took 5 Different Samples
 	 *         
-	 *         From(-∞ to 0) --> our sample is -1 
-	 *         We also took 0 since it is a boundary value 
-	 *         From(0 to 3] --> our sample is 1
-	 *         We also used 3 since it is a boundary value
-	 *         From(3 to ∞) --> our sample is 4
+	 *         From(-∞ to 0) --> our sample is -1 --> NegativeNumItems
+	 *         We also took 0 since it is a boundary value --> ZeroItem
+	 *         From(0 to 3] --> our sample is 1 -->FewItems
+	 *         We also used 3 since it is a boundary value --> ThreeItems
+	 *         From(3 to ∞) --> our sample is 4 --> ManyItems
 	 *         
 	 *         For DeliveryDay Input Set We took 4 Different Samples
 	 *         
 	 *         Because of It is an Enum type we have to test this three values as
 	 *       
-	 *         DeliveryDay.NEXT_DAY
-	 *         DeliveryDay.IN_TWO_DAYS
-	 *         DeliveryDay.IN_A_WEEK
+	 *         DeliveryDay.NEXT_DAY --> NextDay()
+	 *         DeliveryDay.IN_TWO_DAYS --> TwoDays()
+	 *         DeliveryDay.IN_A_WEEK --> AWeek()
 	 *         
-	 *         In addition to those we also test with an Invalid Date value 
+	 *         In addition to those we also test with an Invalid Date value --> InvalidDate()
 	 *         as null
+	 *         
+	 *         
+	 *         
+	 *         We also wrote test cases for getters and setters since they also have some conditions
+	 *         
+	 *         Since Our task is writing positive tests , we didn't get samples as outofInteger values etc
 	 * 
 	 * 
 	 * 
 	 */
 
-
+	@Test
+	public void testNegativePurchaseAmountSetAndGetPurchaseAmount() {
+		
+		Shipment shipment = new Shipment(0,0,null);
+		shipment.setPurchaseAmount(-1);
+		assertEquals(100,shipment.getPurchaseAmount());
+		
+	}
+	
+	@Test
+	public void testZeroPurchaseAmountSetAndGetPurchaseAmount() {
+		
+		Shipment shipment = new Shipment(-1,0,null);
+		shipment.setPurchaseAmount(0);
+		assertEquals(0,shipment.getPurchaseAmount());
+		
+	}
+	
+	@Test
+	public void testOneDollarPurchaseAmountSetAndGetPurchaseAmount() {
+		
+		Shipment shipment = new Shipment(0,0,null);
+		shipment.setPurchaseAmount(1);
+		assertEquals(1,shipment.getPurchaseAmount());
+		
+	}
+	
+	@Test
+	public void testHundredDollarsPurchaseAmountSetAndGetPurchaseAmount() {
+		
+		Shipment shipment = new Shipment(1,0,null);
+		shipment.setPurchaseAmount(100);
+		assertEquals(100,shipment.getPurchaseAmount());
+		
+	}
+	
+	@Test
+	public void testMoreThanHundredDollarsPurchaseAmountSetAndGetPurchaseAmount() {
+		
+		Shipment shipment = new Shipment(100,0,null);
+		shipment.setPurchaseAmount(101);
+		assertEquals(101,shipment.getPurchaseAmount());
+		
+	}
+	
+	@Test
+	public void testNegativeNumItemsSetAndGetNumberOfItems() {
+		
+		Shipment shipment = new Shipment(0,0,null);
+		shipment.setNumberOfItems(-1);
+		assertEquals(3,shipment.getNumberOfItems());
+		
+	}
+	
+	@Test
+	public void testZeroNumItemsSetAndGetNumberOfItems() {
+		
+		Shipment shipment = new Shipment(0,-1,null);
+		shipment.setNumberOfItems(0);
+		assertEquals(0,shipment.getNumberOfItems());
+		
+	}
+	
+	@Test
+	public void testFewNumItemsSetAndGetNumberOfItems() {
+		
+		Shipment shipment = new Shipment(0,0,null);
+		shipment.setNumberOfItems(1);
+		assertEquals(1,shipment.getNumberOfItems());
+	
+	}
+	
+	@Test
+	public void testThreeNumItemsSetAndGetNumberOfItems() {
+		
+		Shipment shipment = new Shipment(0,1,null);
+		shipment.setNumberOfItems(3);
+		assertEquals(3,shipment.getNumberOfItems());
+		
+	}
+	
+	@Test
+	public void testManyNumItemsSetAndGetNumberOfItems() {
+		
+		Shipment shipment = new Shipment(0,3,null);
+		shipment.setNumberOfItems(4);
+		assertEquals(4,shipment.getNumberOfItems());
+		
+	}
+	
+	@Test
+	public void testNextDaySetAndGetDeliveryDate() {
+		
+		Shipment shipment = new Shipment(0,0,DeliveryDay.IN_TWO_DAYS);
+		shipment.setDeliveryDay(DeliveryDay.NEXT_DAY);
+		assertEquals(DeliveryDay.NEXT_DAY,shipment.getDeliveryDay());
+		
+	}
+	
+	@Test
+	public void testTwoDaysSetAndGetDeliveryDate() {
+		
+		Shipment shipment = new Shipment(0,0,DeliveryDay.NEXT_DAY);
+		shipment.setDeliveryDay(DeliveryDay.IN_TWO_DAYS);
+		assertEquals(DeliveryDay.IN_TWO_DAYS,shipment.getDeliveryDay());
+		
+	}
+	
+	@Test
+	public void testAWeekSetAndGetDeliveryDate() {
+		
+		Shipment shipment = new Shipment(0,0,DeliveryDay.IN_TWO_DAYS);
+		shipment.setDeliveryDay(DeliveryDay.IN_A_WEEK);
+		assertEquals(DeliveryDay.IN_A_WEEK,shipment.getDeliveryDay());
+		
+	}
+	
+	@Test
+	public void testInvalidDateSetAndGetDeliveryDate() {
+		
+		Shipment shipment = new Shipment(0,0,DeliveryDay.IN_A_WEEK);
+		shipment.setDeliveryDay(null);
+		assertEquals(DeliveryDay.IN_A_WEEK,shipment.getDeliveryDay());
+		
+	}
+	 
 	
 	@Test
 	public void testNegativePurchaseAmountNegativeNumOfItemsNextDay() {
