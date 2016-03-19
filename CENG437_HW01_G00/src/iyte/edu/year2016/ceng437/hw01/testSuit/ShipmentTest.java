@@ -8,6 +8,40 @@ import iyte.edu.year2016.ceng437.hw01.DeliveryDay;
 import iyte.edu.year2016.ceng437.hw01.Shipment;
 
 public class ShipmentTest {
+	
+	/*
+	 *         Our Sampling Method for ShipmentTest
+	 *         
+	 *         For Purchase Amount Input Set We Took 5 Different Samples
+	 *         
+	 *         From (-∞ to 0) --> our sample is = -1
+	 *         We also used 0 since it is a boundary value we need to use it
+	 *         From (0 to 100] --> our sample is = 1
+	 *         We also used 100 since it is a boundary value
+	 *         From (100 to ∞) --> we used 101 
+	 *         
+	 *         For Number of Items Input Set We took 5 Different Samples
+	 *         
+	 *         From(-∞ to 0) --> our sample is -1 
+	 *         We also took 0 since it is a boundary value 
+	 *         From(0 to 3] --> our sample is 1
+	 *         We also used 3 since it is a boundary value
+	 *         From(3 to ∞) --> our sample is 4
+	 *         
+	 *         For DeliveryDay Input Set We took 4 Different Samples
+	 *         
+	 *         Because of It is an Enum type we have to test this three values as
+	 *       
+	 *         DeliveryDay.NEXT_DAY
+	 *         DeliveryDay.IN_TWO_DAYS
+	 *         DeliveryDay.IN_A_WEEK
+	 *         
+	 *         In addition to those we also test with an Invalid Date value 
+	 *         as null
+	 * 
+	 * 
+	 * 
+	 */
 
 
 	

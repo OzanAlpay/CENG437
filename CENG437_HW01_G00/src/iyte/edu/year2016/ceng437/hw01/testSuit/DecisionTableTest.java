@@ -11,6 +11,7 @@ import iyte.edu.year2016.ceng437.hw01.DecisionTable;
 public class DecisionTableTest {
 
 	DecisionTable decisionTable = new DecisionTable();
+	private static final double DELTA = 0;
 	
 	@Test
 	public void testCalculateNegativePurchaseAmountNegativeNumOfItemsNextDay() {
@@ -19,7 +20,7 @@ public class DecisionTableTest {
 		assertEquals(100,shipment.getPurchaseAmount());
 		assertEquals(3,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.NEXT_DAY, shipment.getDeliveryDay());
-		assertEquals(25,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(25.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -30,7 +31,7 @@ public class DecisionTableTest {
 		assertEquals(100,shipment.getPurchaseAmount());
 		assertEquals(3,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_TWO_DAYS, shipment.getDeliveryDay());
-		assertEquals(10,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(10.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -41,7 +42,7 @@ public class DecisionTableTest {
 		assertEquals(100,shipment.getPurchaseAmount());
 		assertEquals(3,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_A_WEEK,shipment.getDeliveryDay());
-		assertEquals(4,5,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(4.5,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -52,7 +53,7 @@ public class DecisionTableTest {
 		assertEquals(100,shipment.getPurchaseAmount());
 		assertEquals(3,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_A_WEEK,shipment.getDeliveryDay());
-		assertEquals(4,5,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(4.5,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -63,7 +64,7 @@ public class DecisionTableTest {
 		assertEquals(100,shipment.getPurchaseAmount());
 		assertEquals(0,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.NEXT_DAY,shipment.getDeliveryDay());
-		assertEquals(25,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(25.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -74,7 +75,7 @@ public class DecisionTableTest {
 		assertEquals(100,shipment.getPurchaseAmount());
 		assertEquals(0,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_TWO_DAYS,shipment.getDeliveryDay());
-		assertEquals(10,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(10.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -85,7 +86,7 @@ public class DecisionTableTest {
 		assertEquals(100,shipment.getPurchaseAmount());
 		assertEquals(0,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_A_WEEK,shipment.getDeliveryDay());
-		assertEquals(0,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(0.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -96,7 +97,7 @@ public class DecisionTableTest {
 		assertEquals(100,shipment.getPurchaseAmount());
 		assertEquals(0,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_A_WEEK,shipment.getDeliveryDay());
-		assertEquals(0,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(0.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -107,7 +108,7 @@ public class DecisionTableTest {
 		assertEquals(100,shipment.getPurchaseAmount());
 		assertEquals(1,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.NEXT_DAY,shipment.getDeliveryDay());
-		assertEquals(25,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(25.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -118,7 +119,7 @@ public class DecisionTableTest {
 		assertEquals(100,shipment.getPurchaseAmount());
 		assertEquals(1,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_TWO_DAYS,shipment.getDeliveryDay());
-		assertEquals(10,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(10.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -129,7 +130,7 @@ public class DecisionTableTest {
 		assertEquals(100,shipment.getPurchaseAmount());
 		assertEquals(1,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_A_WEEK,shipment.getDeliveryDay());
-		assertEquals(1,5,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(1.5,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -140,7 +141,7 @@ public class DecisionTableTest {
 		assertEquals(100,shipment.getPurchaseAmount());
 		assertEquals(1,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_A_WEEK,shipment.getDeliveryDay());
-		assertEquals(1,5,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(1.5,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -151,7 +152,7 @@ public class DecisionTableTest {
 		assertEquals(100,shipment.getPurchaseAmount());
 		assertEquals(3,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.NEXT_DAY,shipment.getDeliveryDay());
-		assertEquals(25,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(25.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -162,7 +163,7 @@ public class DecisionTableTest {
 		assertEquals(100,shipment.getPurchaseAmount());
 		assertEquals(3,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_TWO_DAYS,shipment.getDeliveryDay());
-		assertEquals(10,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(10.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -173,7 +174,7 @@ public class DecisionTableTest {
 		assertEquals(100,shipment.getPurchaseAmount());
 		assertEquals(3,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_A_WEEK,shipment.getDeliveryDay());
-		assertEquals(4,5,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(4.5,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -184,7 +185,7 @@ public class DecisionTableTest {
 		assertEquals(100,shipment.getPurchaseAmount());
 		assertEquals(3,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_A_WEEK,shipment.getDeliveryDay());
-		assertEquals(4,5,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(4.5,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -195,7 +196,7 @@ public class DecisionTableTest {
 		assertEquals(100,shipment.getPurchaseAmount());
 		assertEquals(4,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.NEXT_DAY,shipment.getDeliveryDay());
-		assertEquals(24,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(24.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	@Test
@@ -205,7 +206,7 @@ public class DecisionTableTest {
 		assertEquals(100,shipment.getPurchaseAmount());
 		assertEquals(4,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_TWO_DAYS,shipment.getDeliveryDay());
-		assertEquals(10,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(10.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -216,7 +217,7 @@ public class DecisionTableTest {
 		assertEquals(100,shipment.getPurchaseAmount());
 		assertEquals(4,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_A_WEEK,shipment.getDeliveryDay());
-		assertEquals(0,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(0.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -227,7 +228,7 @@ public class DecisionTableTest {
 		assertEquals(100,shipment.getPurchaseAmount());
 		assertEquals(4,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_A_WEEK,shipment.getDeliveryDay());
-		assertEquals(0,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(0.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -238,7 +239,7 @@ public class DecisionTableTest {
 		assertEquals(0,shipment.getPurchaseAmount());
 		assertEquals(3,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.NEXT_DAY,shipment.getDeliveryDay());
-		assertEquals(25,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(25.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -249,7 +250,7 @@ public class DecisionTableTest {
 		assertEquals(0,shipment.getPurchaseAmount());
 		assertEquals(3,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_TWO_DAYS,shipment.getDeliveryDay());
-		assertEquals(10,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(10.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -260,7 +261,7 @@ public class DecisionTableTest {
 		assertEquals(0,shipment.getPurchaseAmount());
 		assertEquals(3,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_A_WEEK,shipment.getDeliveryDay());
-		assertEquals(4,5,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(4.5,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	@Test
@@ -270,7 +271,7 @@ public class DecisionTableTest {
 		assertEquals(0,shipment.getPurchaseAmount());
 		assertEquals(3,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_A_WEEK,shipment.getDeliveryDay());
-		assertEquals(4,5,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(4.5,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -281,7 +282,7 @@ public class DecisionTableTest {
 		assertEquals(0,shipment.getPurchaseAmount());
 		assertEquals(0,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.NEXT_DAY,shipment.getDeliveryDay());
-		assertEquals(25,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(25.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -292,7 +293,7 @@ public class DecisionTableTest {
 		assertEquals(0,shipment.getPurchaseAmount());
 		assertEquals(0,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_TWO_DAYS,shipment.getDeliveryDay());
-		assertEquals(10,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(10.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -303,7 +304,7 @@ public class DecisionTableTest {
 		assertEquals(0,shipment.getPurchaseAmount());
 		assertEquals(0,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_A_WEEK,shipment.getDeliveryDay());
-		assertEquals(0,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(0.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -314,7 +315,7 @@ public class DecisionTableTest {
 		assertEquals(0,shipment.getPurchaseAmount());
 		assertEquals(0,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_A_WEEK,shipment.getDeliveryDay());
-		assertEquals(0,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(0.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -325,7 +326,7 @@ public class DecisionTableTest {
 		assertEquals(0,shipment.getPurchaseAmount());
 		assertEquals(1,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.NEXT_DAY,shipment.getDeliveryDay());
-		assertEquals(25,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(25.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -336,7 +337,7 @@ public class DecisionTableTest {
 		assertEquals(0,shipment.getPurchaseAmount());
 		assertEquals(1,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_TWO_DAYS,shipment.getDeliveryDay());
-		assertEquals(10,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(10.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -347,7 +348,7 @@ public class DecisionTableTest {
 		assertEquals(0,shipment.getPurchaseAmount());
 		assertEquals(1,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_A_WEEK,shipment.getDeliveryDay());
-		assertEquals(1,5,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(1.5,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -358,7 +359,7 @@ public class DecisionTableTest {
 		assertEquals(0,shipment.getPurchaseAmount());
 		assertEquals(1,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_A_WEEK,shipment.getDeliveryDay());
-		assertEquals(1,5,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(1.5,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -369,7 +370,7 @@ public class DecisionTableTest {
 		assertEquals(0,shipment.getPurchaseAmount());
 		assertEquals(3,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.NEXT_DAY,shipment.getDeliveryDay());
-		assertEquals(25,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(25.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -380,7 +381,7 @@ public class DecisionTableTest {
 		assertEquals(0,shipment.getPurchaseAmount());
 		assertEquals(3,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_TWO_DAYS,shipment.getDeliveryDay());
-		assertEquals(10,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(10.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -391,7 +392,7 @@ public class DecisionTableTest {
 		assertEquals(0,shipment.getPurchaseAmount());
 		assertEquals(3,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_A_WEEK,shipment.getDeliveryDay());
-		assertEquals(4,5,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(4.5,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -402,7 +403,7 @@ public class DecisionTableTest {
 		assertEquals(0,shipment.getPurchaseAmount());
 		assertEquals(3,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_A_WEEK,shipment.getDeliveryDay());
-		assertEquals(4,5,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(4.5,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -413,7 +414,7 @@ public class DecisionTableTest {
 		assertEquals(0,shipment.getPurchaseAmount());
 		assertEquals(4,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.NEXT_DAY,shipment.getDeliveryDay());
-		assertEquals(24,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(24.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -424,7 +425,7 @@ public class DecisionTableTest {
 		assertEquals(0,shipment.getPurchaseAmount());
 		assertEquals(4,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_TWO_DAYS,shipment.getDeliveryDay());
-		assertEquals(10,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(10.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -435,7 +436,7 @@ public class DecisionTableTest {
 		assertEquals(0,shipment.getPurchaseAmount());
 		assertEquals(4,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_A_WEEK,shipment.getDeliveryDay());
-		assertEquals(0,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(0.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -446,7 +447,7 @@ public class DecisionTableTest {
 		assertEquals(0,shipment.getPurchaseAmount());
 		assertEquals(4,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_A_WEEK,shipment.getDeliveryDay());
-		assertEquals(0,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(0.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -457,7 +458,7 @@ public class DecisionTableTest {
 		assertEquals(1,shipment.getPurchaseAmount());
 		assertEquals(3,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.NEXT_DAY,shipment.getDeliveryDay());
-		assertEquals(25,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(25.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -468,7 +469,7 @@ public class DecisionTableTest {
 		assertEquals(1,shipment.getPurchaseAmount());
 		assertEquals(3,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_TWO_DAYS,shipment.getDeliveryDay());
-		assertEquals(10,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(10.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 	}
 	
 	@Test
@@ -478,7 +479,7 @@ public class DecisionTableTest {
 		assertEquals(1,shipment.getPurchaseAmount());
 		assertEquals(3,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_A_WEEK,shipment.getDeliveryDay());
-		assertEquals(4,5,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(4.5,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -489,7 +490,7 @@ public class DecisionTableTest {
 		assertEquals(1,shipment.getPurchaseAmount());
 		assertEquals(3,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_A_WEEK,shipment.getDeliveryDay());
-		assertEquals(4,5,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(4.5,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -500,7 +501,7 @@ public class DecisionTableTest {
 		assertEquals(1,shipment.getPurchaseAmount());
 		assertEquals(0,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.NEXT_DAY,shipment.getDeliveryDay());
-		assertEquals(25,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(25.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -511,7 +512,7 @@ public class DecisionTableTest {
 		assertEquals(1,shipment.getPurchaseAmount());
 		assertEquals(0,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_TWO_DAYS,shipment.getDeliveryDay());
-		assertEquals(10,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(10.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -522,7 +523,7 @@ public class DecisionTableTest {
 		assertEquals(1,shipment.getPurchaseAmount());
 		assertEquals(0,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_A_WEEK,shipment.getDeliveryDay());
-		assertEquals(0,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(0.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -533,7 +534,7 @@ public class DecisionTableTest {
 		assertEquals(1,shipment.getPurchaseAmount());
 		assertEquals(0,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_A_WEEK,shipment.getDeliveryDay());
-		assertEquals(0,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(0.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -544,7 +545,7 @@ public class DecisionTableTest {
 		assertEquals(1,shipment.getPurchaseAmount());
 		assertEquals(1,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.NEXT_DAY,shipment.getDeliveryDay());
-		assertEquals(25,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(25.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -555,7 +556,7 @@ public class DecisionTableTest {
 		assertEquals(1,shipment.getPurchaseAmount());
 		assertEquals(1,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_TWO_DAYS,shipment.getDeliveryDay());
-		assertEquals(10,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(10.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -566,7 +567,7 @@ public class DecisionTableTest {
 		assertEquals(1,shipment.getPurchaseAmount());
 		assertEquals(1,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_A_WEEK,shipment.getDeliveryDay());
-		assertEquals(1,50,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(1.50,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -577,7 +578,7 @@ public class DecisionTableTest {
 		assertEquals(1,shipment.getPurchaseAmount());
 		assertEquals(1,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_A_WEEK,shipment.getDeliveryDay());
-		assertEquals(1,50,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(1.50,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -588,7 +589,7 @@ public class DecisionTableTest {
 		assertEquals(1,shipment.getPurchaseAmount());
 		assertEquals(3,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.NEXT_DAY,shipment.getDeliveryDay());
-		assertEquals(25,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(25.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -599,7 +600,7 @@ public class DecisionTableTest {
 		assertEquals(1,shipment.getPurchaseAmount());
 		assertEquals(3,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_TWO_DAYS,shipment.getDeliveryDay());
-		assertEquals(10,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(10.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -610,7 +611,7 @@ public class DecisionTableTest {
 		assertEquals(1,shipment.getPurchaseAmount());
 		assertEquals(3,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_A_WEEK,shipment.getDeliveryDay());
-		assertEquals(4,5,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(4.5,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -621,7 +622,7 @@ public class DecisionTableTest {
 		assertEquals(1,shipment.getPurchaseAmount());
 		assertEquals(3,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_A_WEEK,shipment.getDeliveryDay());
-		assertEquals(4,5,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(4.5,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -632,7 +633,7 @@ public class DecisionTableTest {
 		assertEquals(1,shipment.getPurchaseAmount());
 		assertEquals(4,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.NEXT_DAY,shipment.getDeliveryDay());
-		assertEquals(6,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(24.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -643,7 +644,7 @@ public class DecisionTableTest {
 		assertEquals(1,shipment.getPurchaseAmount());
 		assertEquals(4,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_TWO_DAYS,shipment.getDeliveryDay());
-		assertEquals(2,5,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(10.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -654,7 +655,7 @@ public class DecisionTableTest {
 		assertEquals(1,shipment.getPurchaseAmount());
 		assertEquals(4,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_A_WEEK,shipment.getDeliveryDay());
-		assertEquals(0,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(0.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -665,7 +666,7 @@ public class DecisionTableTest {
 		assertEquals(1,shipment.getPurchaseAmount());
 		assertEquals(4,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_A_WEEK,shipment.getDeliveryDay());
-		assertEquals(0,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(0.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 
@@ -676,7 +677,7 @@ public class DecisionTableTest {
 		assertEquals(100,shipment.getPurchaseAmount());
 		assertEquals(3,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.NEXT_DAY,shipment.getDeliveryDay());
-		assertEquals(18,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(25.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 		
 	}
@@ -688,7 +689,7 @@ public class DecisionTableTest {
 		assertEquals(100,shipment.getPurchaseAmount());
 		assertEquals(3,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_TWO_DAYS,shipment.getDeliveryDay());
-		assertEquals(7,5,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(10.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -699,7 +700,7 @@ public class DecisionTableTest {
 		assertEquals(100,shipment.getPurchaseAmount());
 		assertEquals(3,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_A_WEEK,shipment.getDeliveryDay());
-		assertEquals(0,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(4.5,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -710,7 +711,7 @@ public class DecisionTableTest {
 		assertEquals(100,shipment.getPurchaseAmount());
 		assertEquals(3,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_A_WEEK,shipment.getDeliveryDay());
-		assertEquals(0,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(4.5,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -721,7 +722,7 @@ public class DecisionTableTest {
 		assertEquals(100,shipment.getPurchaseAmount());
 		assertEquals(0,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.NEXT_DAY,shipment.getDeliveryDay());
-		assertEquals(25,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(25.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -732,7 +733,7 @@ public class DecisionTableTest {
 		assertEquals(100,shipment.getPurchaseAmount());
 		assertEquals(0,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_TWO_DAYS,shipment.getDeliveryDay());
-		assertEquals(10,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(10.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -743,7 +744,7 @@ public class DecisionTableTest {
 		assertEquals(100,shipment.getPurchaseAmount());
 		assertEquals(0,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_A_WEEK,shipment.getDeliveryDay());
-		assertEquals(0,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(0.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -754,7 +755,7 @@ public class DecisionTableTest {
 		assertEquals(100,shipment.getPurchaseAmount());
 		assertEquals(0,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_A_WEEK,shipment.getDeliveryDay());
-		assertEquals(0,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(0.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -765,7 +766,7 @@ public class DecisionTableTest {
 		assertEquals(100,shipment.getPurchaseAmount());
 		assertEquals(1,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.NEXT_DAY,shipment.getDeliveryDay());
-		assertEquals(25,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(25.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -776,7 +777,7 @@ public class DecisionTableTest {
 		assertEquals(100,shipment.getPurchaseAmount());
 		assertEquals(1,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_TWO_DAYS,shipment.getDeliveryDay());
-		assertEquals(10,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(10.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -787,7 +788,7 @@ public class DecisionTableTest {
 		assertEquals(100,shipment.getPurchaseAmount());
 		assertEquals(1,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_A_WEEK,shipment.getDeliveryDay());
-		assertEquals(1,5,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(1.5,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -798,7 +799,7 @@ public class DecisionTableTest {
 		assertEquals(100,shipment.getPurchaseAmount());
 		assertEquals(1,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_A_WEEK,shipment.getDeliveryDay());
-		assertEquals(1,5,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(1.5,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -809,7 +810,7 @@ public class DecisionTableTest {
 		assertEquals(100,shipment.getPurchaseAmount());
 		assertEquals(3,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.NEXT_DAY,shipment.getDeliveryDay());
-		assertEquals(25,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(25.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -820,7 +821,7 @@ public class DecisionTableTest {
 		assertEquals(100,shipment.getPurchaseAmount());
 		assertEquals(3,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_TWO_DAYS,shipment.getDeliveryDay());
-		assertEquals(10,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(10.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -831,7 +832,7 @@ public class DecisionTableTest {
 		assertEquals(100,shipment.getPurchaseAmount());
 		assertEquals(3,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_A_WEEK,shipment.getDeliveryDay());
-		assertEquals(4,5,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(4.5,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -842,7 +843,7 @@ public class DecisionTableTest {
 		assertEquals(100,shipment.getPurchaseAmount());
 		assertEquals(3,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_A_WEEK,shipment.getDeliveryDay());
-		assertEquals(4,5,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(4.5,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -853,7 +854,7 @@ public class DecisionTableTest {
 		assertEquals(100,shipment.getPurchaseAmount());
 		assertEquals(4,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.NEXT_DAY,shipment.getDeliveryDay());
-		assertEquals(24,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(24.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -864,7 +865,7 @@ public class DecisionTableTest {
 		assertEquals(100,shipment.getPurchaseAmount());
 		assertEquals(4,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_TWO_DAYS,shipment.getDeliveryDay());
-		assertEquals(10,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(10.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -875,7 +876,7 @@ public class DecisionTableTest {
 		assertEquals(100,shipment.getPurchaseAmount());
 		assertEquals(4,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_A_WEEK,shipment.getDeliveryDay());
-		assertEquals(0,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(0.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -886,7 +887,7 @@ public class DecisionTableTest {
 		assertEquals(100,shipment.getPurchaseAmount());
 		assertEquals(4,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_A_WEEK,shipment.getDeliveryDay());
-		assertEquals(0,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(0.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -897,7 +898,7 @@ public class DecisionTableTest {
 		assertEquals(101,shipment.getPurchaseAmount());
 		assertEquals(3,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.NEXT_DAY,shipment.getDeliveryDay());
-		assertEquals(35,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(35.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -908,7 +909,7 @@ public class DecisionTableTest {
 		assertEquals(101,shipment.getPurchaseAmount());
 		assertEquals(3,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_TWO_DAYS,shipment.getDeliveryDay());
-		assertEquals(15,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(15.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -919,7 +920,7 @@ public class DecisionTableTest {
 		assertEquals(101,shipment.getPurchaseAmount());
 		assertEquals(3,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_A_WEEK,shipment.getDeliveryDay());
-		assertEquals(10,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(10.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -930,7 +931,7 @@ public class DecisionTableTest {
 		assertEquals(101,shipment.getPurchaseAmount());
 		assertEquals(3,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_A_WEEK,shipment.getDeliveryDay());
-		assertEquals(10,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(10.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -941,7 +942,7 @@ public class DecisionTableTest {
 		assertEquals(101,shipment.getPurchaseAmount());
 		assertEquals(0,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.NEXT_DAY,shipment.getDeliveryDay());
-		assertEquals(35,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(35.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -952,7 +953,7 @@ public class DecisionTableTest {
 		assertEquals(101,shipment.getPurchaseAmount());
 		assertEquals(0,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_TWO_DAYS,shipment.getDeliveryDay());
-		assertEquals(15,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(15.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -963,7 +964,7 @@ public class DecisionTableTest {
 		assertEquals(101,shipment.getPurchaseAmount());
 		assertEquals(0,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_A_WEEK,shipment.getDeliveryDay());
-		assertEquals(10,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(10.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -974,7 +975,7 @@ public class DecisionTableTest {
 		assertEquals(101,shipment.getPurchaseAmount());
 		assertEquals(0,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_A_WEEK,shipment.getDeliveryDay());
-		assertEquals(10,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(10.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -985,7 +986,7 @@ public class DecisionTableTest {
 		assertEquals(101,shipment.getPurchaseAmount());
 		assertEquals(1,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.NEXT_DAY,shipment.getDeliveryDay());
-		assertEquals(35,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(35.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 		
 	}
@@ -997,7 +998,7 @@ public class DecisionTableTest {
 		assertEquals(101,shipment.getPurchaseAmount());
 		assertEquals(1,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_TWO_DAYS,shipment.getDeliveryDay());
-		assertEquals(15,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(15.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -1008,7 +1009,7 @@ public class DecisionTableTest {
 		assertEquals(101,shipment.getPurchaseAmount());
 		assertEquals(1,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_A_WEEK,shipment.getDeliveryDay());
-		assertEquals(10,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(10.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -1019,7 +1020,7 @@ public class DecisionTableTest {
 		assertEquals(101,shipment.getPurchaseAmount());
 		assertEquals(1,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_A_WEEK,shipment.getDeliveryDay());
-		assertEquals(10,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(10.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -1030,7 +1031,7 @@ public class DecisionTableTest {
 		assertEquals(101,shipment.getPurchaseAmount());
 		assertEquals(3,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.NEXT_DAY,shipment.getDeliveryDay());
-		assertEquals(35,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(35.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -1041,7 +1042,7 @@ public class DecisionTableTest {
 		assertEquals(101,shipment.getPurchaseAmount());
 		assertEquals(3,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_TWO_DAYS,shipment.getDeliveryDay());
-		assertEquals(15,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(15.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -1052,7 +1053,7 @@ public class DecisionTableTest {
 		assertEquals(101,shipment.getPurchaseAmount());
 		assertEquals(3,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_A_WEEK,shipment.getDeliveryDay());
-		assertEquals(10,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(10.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -1063,7 +1064,7 @@ public class DecisionTableTest {
 		assertEquals(101,shipment.getPurchaseAmount());
 		assertEquals(3,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_A_WEEK,shipment.getDeliveryDay());
-		assertEquals(10,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(10.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -1074,8 +1075,7 @@ public class DecisionTableTest {
 		assertEquals(101,shipment.getPurchaseAmount());
 		assertEquals(4,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.NEXT_DAY,shipment.getDeliveryDay());
-		assertEquals(28,0,decisionTable.calculateShipmentCost(shipment));
-		
+		assertEquals(30.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -1086,7 +1086,7 @@ public class DecisionTableTest {
 		assertEquals(101,shipment.getPurchaseAmount());
 		assertEquals(4,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_TWO_DAYS,shipment.getDeliveryDay());
-		assertEquals(14,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(14.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -1097,7 +1097,7 @@ public class DecisionTableTest {
 		assertEquals(101,shipment.getPurchaseAmount());
 		assertEquals(4,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_A_WEEK,shipment.getDeliveryDay());
-		assertEquals(10,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(10.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 	
@@ -1108,7 +1108,7 @@ public class DecisionTableTest {
 		assertEquals(101,shipment.getPurchaseAmount());
 		assertEquals(4,shipment.getNumberOfItems());
 		assertEquals(DeliveryDay.IN_A_WEEK,shipment.getDeliveryDay());
-		assertEquals(10,0,decisionTable.calculateShipmentCost(shipment));
+		assertEquals(10.0,decisionTable.calculateShipmentCost(shipment),DELTA);
 		
 	}
 
