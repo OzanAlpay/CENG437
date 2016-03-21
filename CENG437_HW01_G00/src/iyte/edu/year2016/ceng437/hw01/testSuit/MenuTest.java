@@ -30,10 +30,13 @@ public class MenuTest {
 	 *  
 	 *  I cannot tested negative values since there is a while loop and i couldn't bypass it
 	 *  
+	 *  Also i wrote a testCase for closeMenu function , but i commented it , because i couldn't decide
+	 *  it is a positive test or not
 	 * 
 	 * 
 	 * 
 	 */
+	
 	@Test
 	public void testReadPurchaseAmountZeroDollarValue() {
 		
@@ -104,11 +107,23 @@ public class MenuTest {
 		} catch(InputMismatchException e) {
 			
 		}
-		assertEquals(DeliveryDay.IN_A_WEEK,deliveryDay);
+		assertEquals(null,deliveryDay);
+	}
+	
+	/*
+	
+	@Test
+	public void testCloseMenu() {
+		
+		menu.closeMenu();
+		System.out.println("Test Name : testCloseMenu");
+		System.out.println("Enter Whatever you want");
+		assertEquals(null,menu.readDeliveryDay());
+		
 	}
 
 		
-	/*@Test
+	@Test
 	public void testReadPurchaseAmountNegativeDollarValue() {
 		
 		System.out.println("Enter An Amount Which Equal to -1");
