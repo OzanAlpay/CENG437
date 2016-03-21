@@ -2,6 +2,20 @@ package iyte.edu.year2016.ceng437.hw01.testSuit;
 
 import static org.junit.Assert.*;
 
+
+
+	/*
+	 * 
+	 *   I used the same samples which i tested in ShipmentTest file
+	 *   Since all of them passed the tests in the ShipmentTest now I am sure
+	 *   about that i am testing the right Shipments [like it is impossible to find 
+	 *   an error during shipment creation in my sample area].
+	 *    
+	 *   Since it is a financial program i assigned DELTA value to zero
+	 * 
+	 * 
+	 */
+
 import org.junit.Test;
 
 import iyte.edu.year2016.ceng437.hw01.DeliveryDay;

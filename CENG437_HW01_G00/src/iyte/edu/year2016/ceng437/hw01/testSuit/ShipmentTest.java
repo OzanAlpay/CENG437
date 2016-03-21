@@ -38,13 +38,17 @@ public class ShipmentTest {
 	 *         
 	 *         In addition to those we also test with an Invalid Date value --> InvalidDate()
 	 *         as null
-	 *         
-	 *         
-	 *         
+	 *               
+	 *       
 	 *         We also wrote test cases for getters and setters since they also have some conditions
 	 *         
 	 *         Since Our task is writing positive tests , we didn't get samples as outofInteger values etc
+	 * 			
 	 * 
+	 * 			At the first look it seems like some of test are not really required , however
+	 * 			I am going to use this samples in my DecisionTableTest class , and i have to be sure about that
+	 * 			My samples created correctly. That's why i wrote a lot of test that some of them can be considered as
+	 * 			unnecessary.
 	 * 
 	 * 
 	 */
