@@ -23,7 +23,16 @@ import iyte.edu.year2016.ceng437.hw01.Shipment;
 import iyte.edu.year2016.ceng437.hw01.DecisionTable;
 
 public class DecisionTableTest {
-
+	/*
+	 * 
+	 *   Group 02
+	 *   180201047 -- Gülfem Dilemek
+	 *   190201012 -- Ozan Alpay
+	 * 
+	 * 
+	 * 
+	 * 
+	 */
 	DecisionTable decisionTable = new DecisionTable();
 	private static final double DELTA = 0;
 	
